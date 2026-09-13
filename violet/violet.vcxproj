@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug x86-64|x64">
+      <Configuration>Debug x86-64</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Production x86-64|x64">
+      <Configuration>Production x86-64</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\app\entry.cpp" />
+    <ClCompile Include="src\deps\imgui\imgui.cpp" />
+    <ClCompile Include="src\deps\imgui\imgui_draw.cpp" />
+    <ClCompile Include="src\deps\imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="src\deps\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="src\deps\imgui\imgui_tables.cpp" />
+    <ClCompile Include="src\deps\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="src\io\memory\memory.cpp" />
+    <ClCompile Include="src\mesh\parse.cpp" />
+    <ClCompile Include="src\features\aiming.cpp" />
+    <ClCompile Include="src\features\bytecode.cpp" />
+    <ClCompile Include="src\game\entity_cache.cpp" />
+    <ClCompile Include="src\io\ipc\config.cpp" />
+    <ClCompile Include="src\io\ipc\ipc_handlers.cpp" />
+    <ClCompile Include="src\io\ipc\server.cpp" />
+    <ClCompile Include="src\render\overlay.cpp" />
+    <ClCompile Include="src\render\snow.cpp" />
+    <ClCompile Include="src\ui\web_menu.cpp" />
+  <ClCompile Include="src\exec\src\client.cpp" /><ClCompile Include="src\exec\src\process.cpp" /><ClCompile Include="src\exec\src\repl.cpp" /><ClCompile Include="src\exec\src\teleport_handler.cpp" /><ClCompile Include="src\exec\src\utils.cpp" /><ClCompile Include="src\exec\src\websocket.cpp" /><ClCompile Include="src\exec\src\instances\datamodel.cpp" /><ClCompile Include="src\exec\src\instances\instance.cpp" /><ClCompile Include="src\exec\src\instances\localscript.cpp" /><ClCompile Include="src\exec\src\instances\modulescript.cpp" /><ClCompile Include="src\exec\src\instances\objectvalue.cpp" /><ClCompile Include="src\exec\src\instances\scriptcontext.cpp" /><ClCompile Include="src\exec\src\listeners\filesystem.cpp" /><ClCompile Include="src\exec\src\listeners\getscriptbytecode.cpp" /><ClCompile Include="src\exec\src\listeners\hookfunction.cpp" /><ClCompile Include="src\exec\src\listeners\initialize.cpp" /><ClCompile Include="src\exec\src\listeners\is_compilable.cpp" /><ClCompile Include="src\exec\src\listeners\listener.cpp" /><ClCompile Include="src\exec\src\listeners\loadstring.cpp" /><ClCompile Include="src\exec\src\listeners\queue_on_teleport.cpp" /><ClCompile Include="src\exec\src\listeners\request.cpp" /><ClCompile Include="src\exec\src\listeners\setreadonly.cpp" /><ClCompile Include="src\exec\src\listeners\setrequirebypass.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\Allocator.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\Ast.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\BuiltinFolding.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\Builtins.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\BytecodeBuilder.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\Compiler.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\Confusables.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\ConstantFolding.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\CostModel.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\Cst.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\lcode.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\Lexer.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\Location.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\Parser.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\PrettyPrinter.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\StringUtils.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\TableShape.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\TimeTrace.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\Types.cpp" /><ClCompile Include="src\exec\dependencies\luau\src\ValueTracking.cpp" /><ClCompile Include="src\exec\dependencies\openssl\applink.c" /></ItemGroup>
+
+  <ItemGroup>
+    <ClInclude Include="src\core\logger.hpp" />
+    <ClInclude Include="src\core\detail.hpp" />
+    <ClInclude Include="src\core\globals.hpp" />
+    <ClInclude Include="src\deps\imgui\imconfig.h" />
+    <ClInclude Include="src\deps\imgui\imgui.h" />
+    <ClInclude Include="src\deps\imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="src\deps\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="src\deps\imgui\imgui_internal.h" />
+    <ClInclude Include="src\deps\imgui\imstb_rectpack.h" />
+    <ClInclude Include="src\deps\imgui\imstb_textedit.h" />
+    <ClInclude Include="src\deps\imgui\imstb_truetype.h" />
+    <ClInclude Include="src\deps\lazy_importer.hpp" />
+    <ClInclude Include="src\game\offsets.hpp" />
+    <ClInclude Include="src\game\sdk.hpp" />
+    <ClInclude Include="src\math\math.hpp" />
+    <ClInclude Include="src\io\memory\memory.hpp" />
+    <ClInclude Include="src\mesh\parse.h" />
+    <ClInclude Include="src\features\aiming.hpp" />
+    <ClInclude Include="src\features\bytecode.h" />
+    <ClInclude Include="src\features\rescan.hpp" />
+    <ClInclude Include="src\features\visuals.hpp" />
+    <ClInclude Include="src\io\network\request.h" />
+    <ClInclude Include="src\game\entity_cache.hpp" />
+    <ClInclude Include="src\render\font.h" />
+    <ClInclude Include="src\render\overlay.h" />
+    <ClInclude Include="src\render\snow.h" />
+    <ClInclude Include="src\threads\manager.h" />
+    <ClInclude Include="src\io\ipc\config.hpp" />
+    <ClInclude Include="src\io\ipc\ipc_handlers.hpp" />
+    <ClInclude Include="src\io\ipc\server.hpp" />
+    <ClInclude Include="src\security\obfuscator.hpp" />
+    <ClInclude Include="src\ui\web_menu.hpp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <MASM Include="src\io\memory\hagi.asm">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Production x86-64|x64'">false</ExcludedFromBuild>
+    </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{473bb401-d847-47d3-a870-88181754a953}</ProjectGuid>
+    <RootNamespace>violet</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>violet</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug x86-64|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Production x86-64|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug x86-64|x64'">
+    <OutDir>$(SolutionDir)Build\Debug\</OutDir>
+    <IntDir>$(SolutionDir)Build\Intermediates\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Production x86-64|x64'">
+    <OutDir>$(SolutionDir)Build\Production\</OutDir>
+    <IntDir>$(SolutionDir)Build\Intermediates\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Production x86-64|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug x86-64|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINSOCKAPI_;MSGPACK_NO_BOOST;CPPHTTPLIB_OPENSSL_SUPPORT;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_SILENCE_ALL_CXX23_DEPRECATION_WARNINGS;_SILENCE_CXX23_ALIGNED_STORAGE_DEPRECATION_WARNING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4005;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp23</LanguageStandard>
+      <LanguageStandard_C>stdclatest</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\exec\dependencies\msgpack\include;$(ProjectDir)src\exec\dependencies\luau\include;$(ProjectDir)src\exec\dependencies;$(ProjectDir)src\exec;$(ProjectDir)src;$(ProjectDir)..\packages\Microsoft.Web.WebView2.1.0.3719.77\build\native\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)libs;$(ProjectDir)..\packages\Microsoft.Web.WebView2.1.0.3719.77\build\native\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>bcrypt.lib;crypt32.lib;ws2_32.lib;zstd_static.lib;blake3.lib;ixwebsocket.lib;libcrypto_static.lib;libssl_static.lib;WebView2LoaderStatic.lib;dwmapi.lib;dxgi.lib;d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Production x86-64|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINSOCKAPI_;MSGPACK_NO_BOOST;CPPHTTPLIB_OPENSSL_SUPPORT;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_SILENCE_ALL_CXX23_DEPRECATION_WARNINGS;_SILENCE_CXX23_ALIGNED_STORAGE_DEPRECATION_WARNING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4005;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp23</LanguageStandard>
+      <LanguageStandard_C>stdclatest</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\exec\dependencies\msgpack\include;$(ProjectDir)src\exec\dependencies\luau\include;$(ProjectDir)src\exec\dependencies;$(ProjectDir)src\exec;$(ProjectDir)src;$(ProjectDir)..\packages\Microsoft.Web.WebView2.1.0.3719.77\build\native\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)libs;$(ProjectDir)..\packages\Microsoft.Web.WebView2.1.0.3719.77\build\native\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>bcrypt.lib;crypt32.lib;ws2_32.lib;zstd_static.lib;blake3.lib;ixwebsocket.lib;libcrypto_static.lib;libssl_static.lib;WebView2LoaderStatic.lib;dwmapi.lib;dxgi.lib;d3d11.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
